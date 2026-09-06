@@ -1,0 +1,742 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+
+/* Splash */
+
+/* =========================
+   SPLASH SCREEN
+========================= */
+
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.8s ease,
+                visibility 0.8s ease;
+}
+
+
+/* Website open ஆன பிறகு hide */
+
+#splash.hide-splash {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* Splash Content */
+
+.splash-content {
+
+    text-align: center;
+
+    animation: splashShow 1s ease forwards;
+
+}
+
+
+/* Logo */
+
+.splash-logo {
+
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Name */
+
+.splash-content h1 {
+
+    color: white;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+
+}
+
+
+/* Subtitle */
+
+.splash-content p {
+
+    color: #ccc;
+
+    font-size: 18px;
+
+    margin-top: 10px;
+
+}
+
+
+/* Animation */
+
+@keyframes splashShow {
+
+    from {
+
+        transform: scale(0.5);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+#splash{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+@keyframes slideFromRight{
+
+    from{
+        transform: translateX(100vw);
+        opacity:0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+
+}
+
+.splash-content{
+text-align:center;
+}
+
+.splash-logo{
+width:120px;
+height:120px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.splash-content h1{
+font-size:38px;
+letter-spacing:2px;
+}
+
+.splash-content p{
+margin-top:10px;
+font-size:18px;
+}
+
+.splash-content h1 {
+    color: white;
+    text-shadow:
+        0 0 5px white,
+        0 0 10px white,
+        0 0 20px white,
+        0 0 40px white;
+
+    animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+.splash-content p {
+    color: white;
+    text-shadow:
+        0 0 5px white,
+        0 0 15px white;
+
+    animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+
+    from {
+        text-shadow:
+            0 0 5px white,
+            0 0 0px white;
+    }
+
+    to {
+        text-shadow:
+            0 0 10px white,
+            0 0 15px white,
+            0 0 0px white;
+    }
+
+}
+
+
+/* Header */
+
+header{
+background:#000;
+padding:15px;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.top{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+margin-bottom:15px;
+}
+
+.logo{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+.top h1{
+font-size:24px;
+color: white;
+text-shadow: 0px 0px 6px white
+}
+
+.top p{
+font-size:12px;
+color:#ccc;
+}
+
+/* Search */
+
+.search-box{
+display:flex;
+gap:8px;
+}
+
+.search-box input{
+flex:1;
+padding:13px;
+border-radius:25px;
+border:none;
+font-size:16px;
+}
+
+.search-box button{
+background:#b6ff00;
+border:none;
+padding:13px 18px;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* Banner */
+
+.banner{
+height:220px;
+margin:15px;
+border-radius:20px;
+background:linear-gradient(90deg,#111,#333);
+display:flex;
+align-items:center;
+padding:25px;
+}
+
+.banner h2{
+font-size:28px;
+color:#b6ff00;
+}
+
+.banner p{
+margin:10px 0;
+color:#ddd;
+}
+
+.banner button{
+padding:10px 20px;
+background:#b6ff00;
+border:none;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* Titles */
+
+.section-title{
+margin:20px 15px 10px;
+color:#b6ff00;
+}
+
+/* Offers */
+
+.offers{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding:15px;
+scrollbar-color:#b6ff00 #2a2a2a;
+scrollbar-width:thin;
+}
+
+.offers::-webkit-scrollbar{
+height:10px;
+}
+
+.offers::-webkit-scrollbar-track{
+background:#2a2a2a;
+}
+
+.offers::-webkit-scrollbar-thumb{
+background:#b6ff00;
+border-radius:10px;
+}
+
+.offer-card{
+min-width:220px;
+background:#1c1c1c;
+border-radius:15px;
+padding:10px;
+cursor:pointer;
+touch-action:manipulation;
+}
+
+.offer-card span{
+background:#ac0ad4;
+color:white;
+padding:5px;
+border-radius:8px;
+font-size:14px;
+font-weight:bold;
+display:inline-block;
+transform-origin:center;
+animation:sale 1.8s ease-in-out infinite;
+}
+
+@keyframes sale{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.12);
+}
+}
+
+
+.offer-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+margin-top:10px;
+}
+
+.offer-card h3{
+font-size:15px;
+margin-top:8px;
+}
+
+.offer-card p{
+color:#b6ff00;
+font-weight:bold;
+margin-top:5px;
+}
+
+/* Categories */
+
+.categories{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+padding:15px;
+}
+
+.category{
+background:#1b1b1b;
+border-radius:15px;
+padding:10px;
+text-align:center;
+cursor:pointer;
+}
+
+.category img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.category p{
+margin-top:8px;
+font-size:18px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oldprice {
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+}
+
+.price-row p {
+    color: #b6ff00;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.oldprice{
+    color: white;
+}
+
+.product h4 {
+    color: red;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.product h5{
+    margin-top: 3px;
+    color: gray;
+    font-size: 18px;
+}
+
+/* Brands */
+
+.brands{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+padding:15px;
+}
+
+.brands div{
+background:#222;
+padding:20px;
+text-align:center;
+border-radius:12px;
+font-weight:bold;
+color:#b6ff00;
+}
+
+/* Products */
+
+#categoryTitle{
+margin:15px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.product{
+background:#1c1c1c;
+border-radius:15px;
+padding:10px;
+cursor:pointer;
+}
+
+.product img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.product h3{
+font-size:15px;
+margin-top:8px;
+}
+
+.product p{
+color:#b6ff00;
+font-weight:bold;
+margin-top:5px;
+}
+
+/* Detail */
+
+#productDetail{
+padding:20px;
+}
+
+.detail-img{
+width:100%;
+height:auto;
+max-height:70vh;
+object-fit:contain;
+display:block;
+background:#1c1c1c;
+border-radius:15px;
+}
+
+.detail-title{
+font-size:25px;
+margin-top:15px;
+}
+
+.detail-price{
+font-size:26px;
+color:#b6ff00;
+margin:10px 0;
+}
+
+.detail-desc{
+color:#ddd;
+line-height:1.6;
+}
+
+.detail-oldprice{
+    color: grey;
+    font-size: 18px;
+}
+
+.detailPagePrice{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-discount{
+    color: red;
+    font-size: 20px;
+    margin-top: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.whatsapp{
+display:block;
+margin-top:20px;
+background:#25D366;
+padding:15px;
+text-align:center;
+border-radius:25px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Back */
+
+/* =========================
+   FIXED / STICKY BACK BUTTON
+========================= */
+
+#productPage,
+#detailPage,
+#searchPage{
+    padding-top:65px;
+}
+
+.back {
+    position: fixed;
+    top: 150px;
+    left: 15px;
+    z-index: 1000;
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #b6ff00;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .back {
+        top: 145px;
+        left: 12px;
+        padding: 10px 18px;
+        border-radius: 25px;
+
+    }
+
+}
+
+/* Footer */
+
+footer img{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+footer{
+background:#000;
+margin-top:30px;
+padding:25px 15px;
+text-align:center;
+}
+
+footer h2{
+color:#b6ff00;
+}
+
+.branch{
+margin-top:20px;
+}
+
+.branch h3{
+color:#b6ff00;
+margin-bottom: 5px;
+}
+
+.branch a{
+display:inline-block;
+margin-top:8px;
+color:blue;
+}
+
+.instagram{
+display:inline-block;
+margin-top:20px;
+background:#b6ff00;
+color:black;
+padding:12px 20px;
+border-radius:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hidden{
+display:none !important;
+}
+
+/* Desktop */
+
+@media(min-width:768px){
+
+.categories{
+grid-template-columns:repeat(4,1fr);
+}
+
+.products{
+grid-template-columns:repeat(4,1fr);
+}
+
+.banner{
+height:300px;
+}
+
+.offer-card{
+min-width:220px;
+}
+
+}
+
+
+/* =========================
+   PRODUCT PRICE
+========================= */
+
+.product-price {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* OLD PRICE */
+
+.product-price del {
+
+    color: #888;
+
+    font-size: 14px;
+
+}
+
+
+/* DISCOUNT PRICE */
+
+.product-price strong {
+
+    color: #b6ff00;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+}
+
+
+/* DISCOUNT */
+
+.product-price .discount {
+
+    background: #b6ff00;
+
+    color: #000;
+
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}

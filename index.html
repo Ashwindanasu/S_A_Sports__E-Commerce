@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.A SPORTS | Premium Cricket Store</title>
+<meta name="description" content="Buy cricket bats, gloves, pads, helmets, balls, shoes and accessories from S.A SPORTS.">
+<meta name="keywords" content="Cricket Bat, MRF Bat, SS Bat, DSC Bat, SG Cricket, TON, SF, Cricket Shop">
+<meta name="author" content="S.A SPORTS">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Splash Screen -->
+<div id="splash">
+    <div class="splash-content">
+        <img src="sa_spaorts.png" class="splash-logo" alt="S.A SPORTS logo">
+        <h1>S.A SPORTS</h1>
+        <p>Premium Cricket Store</p>
+    </div>
+</div>
+
+<div id="app">
+
+<header>
+    <div class="top">
+        <img src="sa_spaorts.png" class="logo" alt="S.A SPORTS logo">
+        <div>
+            <h1>S.A SPORTS</h1>
+            <p>Premium Cricket Store</p>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search bats, gloves, helmets..." onkeyup="searchProduct()">
+        <button type="button" onclick="searchProduct()">Search</button>
+    </div>
+</header>
+
+<!-- Home Page -->
+<section id="homePage">
+
+    <div class="banner">
+        <div>
+            <h2>Professional Cricket Collection</h2>
+            <p>Best Cricket Equipment for Champions</p>
+            <button type="button" onclick="showCategory('English Willow')">Shop Now</button>
+        </div>
+    </div>
+
+    <h2 class="section-title">Latest Offers</h2>
+
+    <div class="offers">
+
+        <!-- IMPORTANT: These IDs match the products array in script.js -->
+        <div class="offer-card" onclick="showDetail(101)" role="button" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault();showDetail(101)}">
+            <span class="sale">20% OFF</span>
+            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/bat/x/p/t/0-9-mrf-willow-cricket-bat-for-leather-ball-size-6-wood-6-yt-original-imahgvkdhfjrgnef.jpeg?q=20" alt="MRF English Willow">
+            <h3>MRF English Willow</h3>
+            <p>₹12,999</p>
+        </div>
+
+        <div class="offer-card" onclick="showDetail(2001)" role="button" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault();showDetail(2001)}">
+            <span class="sale">NEW</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4aMk0WfcOdFNUSeXA7U3tOP_pPVNsQuc2tFCqwvrxkg&s=10" alt="SS Batting Gloves">
+            <h3>SS Batting Gloves</h3>
+            <p>₹2,499</p>
+        </div>
+
+        <div class="offer-card" onclick="showDetail(5001)" role="button" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' '){event.preventDefault();showDetail(5001)}">
+            <span class="sale">15% OFF</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2_uCXvmKWY0fCy8HbCDwbiahGWDnyhVow45IkDlitw&s=10" alt="DSC Cricket Shoes">
+            <h3>DSC Cricket Shoes</h3>
+            <p>₹3,999</p>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Shop By Category</h2>
+    <div class="categories">
+        <div onclick="showCategory('English Willow')" class="category"><img src="https://rukminim2.flixcart.com/image/480/640/xif0q/bat/x/p/t/0-9-mrf-willow-cricket-bat-for-leather-ball-size-6-wood-6-yt-original-imahgvkdhfjrgnef.jpeg?q=20" alt="English Willow"><p>English Willow</p></div>
+        <div onclick="showCategory('Kashmir Willow')" class="category"><img src="https://prokicksports.com/cdn/shop/files/main-02_7a2d7a4b-3308-4a66-bfda-91e0b3159b26.jpg?v=1787726905&width=600" alt="Kashmir Willow"><p>Kashmir Willow</p></div>
+        <div onclick="showCategory('Gloves')" class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOq7D0UmuZpsU99Rdm2fgdFAudqDRvQTf8UkrWKlcNYw&s=10" alt="Gloves and Pads"><p>Gloves &amp; Pads</p></div>
+        <div onclick="showCategory('Helmet')" class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTReqY2ABbw3hK6srCqoZBrHJ8HhEts3c656tOJfLWMxA&s" alt="Helmets"><p>Helmets</p></div>
+        <div onclick="showCategory('Ball')" class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuxbCI45lI9mQ3s2TcGXMX6LiRBO32zj5aue6w2VNluA&s" alt="Cricket Balls"><p>Cricket Balls</p></div>
+        <div onclick="showCategory('Shoes')" class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfiQMHk8IZiGa55vsrzxgShk3oIUsQ2I3dRIHM7-Lrrg&s=10" alt="Cricket Shoes"><p>Cricket Shoes</p></div>
+        <div onclick="showCategory('Bag')" class="category"><img src="https://ik.imagekit.io/vyka3olhl/uk/product-34/steel-blue/SHREY_META_WHEELIE_150_3068_STEEL_BLUE_1_HD_0ZtkJt95p.webp?tr=w-700,h-933" alt="Kit Bags"><p>Kit Bags</p></div>
+        <div onclick="showCategory('Accessories')" class="category"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQq7BcFzBcpkykwQhClykqRwhjIQI69G_dM8x77dLl4A&s=10" alt="Accessories"><p>Accessories</p></div>
+    </div>
+
+    <h2 class="section-title">Top Brands</h2>
+    <div class="brands">
+        <div>MRF</div><div>SS</div><div>DSC</div><div>SG</div><div>TON</div><div>SF</div>
+    </div>
+</section>
+
+<!-- Product List -->
+<section id="productPage" class="hidden">
+    <button class="back" type="button" onclick="goHome()">← Back</button>
+    <h2 id="categoryTitle"></h2>
+    <div id="productGrid" class="products"></div>
+</section>
+
+<!-- Product Detail -->
+<section id="detailPage" class="hidden">
+    <button class="back" type="button" onclick="goBackProducts()">← Back</button>
+    <div id="productDetail"></div>
+</section>
+
+<!-- Search Result -->
+<section id="searchPage" class="hidden">
+    <button class="back" type="button" onclick="goHome()">← Back</button>
+    <h2 class="search-title">Search Results</h2>
+    <div id="searchResults" class="products"></div>
+</section>
+
+<footer>
+    <img src="shop_image.jpeg" alt="S.A SPORTS store">
+    <h2>S.A SPORTS</h2>
+    <p>Your Trusted Cricket Store</p>
+
+    <div class="branch">
+        <h3>Mahindra City Branch</h3>
+        <p>📞 +91 96000 04723</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a>
+    </div>
+
+    <div class="branch">
+        <h3>Tirunelveli Branch</h3>
+        <p>📞 +91 XXXXX XXXXX</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a>
+    </div>
+
+    <a class="instagram" href="https://www.instagram.com/sasports11/" target="_blank" rel="noopener">Instagram</a>
+</footer>
+
+</div>
+
+<script src="script.js?v=3"></script>
+</body>
+</html>
